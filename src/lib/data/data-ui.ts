@@ -1,72 +1,65 @@
-export const carouselImages = [
+
+import { CarouselImage } from "../types/data-ui";
+
+export const carouselImages: CarouselImage[] = [
   {
-    id: 1,
+    id: "carousel-1",
     src: "/images/carousel/1.jpg",
     alt: "Torneo de ajedrez",
     caption: ""
   },
   {
-    id: 2,
+    id: "carousel-2",
     src: "/images/carousel/2.png",
     alt: "Clases de ajedrez",
     caption: ""
   },
-  
   {
-    id: 4,
+    id: "carousel-3",
     src: "/images/carousel/4.png",
     alt: "Club de ajedrez",
     caption: ""
   },
   {
-    id: 5,
+    id: "carousel-4",
     src: "/images/carousel/5.png",
     alt: "Club de ajedrez en montevideo",
     caption: ""
   },
   {
-    id: 6,
+    id: "carousel-5",
     src: "/images/carousel/6.png",
     alt: "Clases de ajedrez",
     caption: ""
   },
   {
-    id: 7,
+    id: "carousel-6",
     src: "/images/carousel/7.png",
-    alt: "Ajedrez en montevvideo",
+    alt: "Ajedrez en montevideo",
     caption: ""
   },
-
   {
-    id: 1,
+    id: "carousel-historia-1",
     src: "/images/carousel/historia-1.jpg",
-    alt: "",
+    alt: "Historia del club - Imagen 1",
     caption: ""
   },
   {
-    id: 2,
+    id: "carousel-historia-2",
     src: "/images/carousel/historia-2.jpg",
-    alt: "",
+    alt: "Torneo de 1975",
     caption: ""
   },
   {
-    id: 3,
+    id: "carousel-historia-3",
     src: "/images/carousel/historia-3.JPG",
-    alt: "",
+    alt: "Equipo juvenil 1990",
     caption: ""
-  }
-  ,
+  },
   {
-    id: 3,
+    id: "carousel-historia-4",
     src: "/images/carousel/historia-4.jpeg",
-    alt: "",
+    alt: "Historia del club - Imagen 4",
     caption: ""
   }
 ];
-
-export interface CarouselImage {
-  id: number;
-  src: string;
-  alt: string;
-  caption: string;
-}

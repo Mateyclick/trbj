@@ -2,12 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface ImageSlide {
-  id: number;
-  src: string;
-  alt: string;
-  caption?: string;
-}
+import { CarouselImage as ImageSlide } from "@/lib/types/data-ui";
 
 interface ImageCarouselProps {
   images: ImageSlide[];
@@ -63,7 +58,7 @@ const ImageCarousel = ({ images, autoplaySpeed = 5000 }: ImageCarouselProps) => 
       <div className="relative w-full h-full">
         {images.map((image, index) => (
           <div
-            key={image.id}
+            key={`image-${image.id}`}
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
@@ -114,7 +109,7 @@ const ImageCarousel = ({ images, autoplaySpeed = 5000 }: ImageCarouselProps) => 
       <div className="absolute bottom-4 inset-x-0 flex justify-center gap-2">
         {images.map((_, index) => (
           <button
-            key={index}
+            key={`dot-${index}`}
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-all ${
               index === currentIndex 
